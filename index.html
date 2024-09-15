@@ -1,0 +1,462 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Nuestra boda A y L</title>
+	<link rel="shortcut icon" href="images/logob.png" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FREEHTML5.CO" />
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="css/simple-line-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Style -->
+	<link rel="stylesheet" href="css/style.css">
+
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+	<header role="banner" id="fh5co-header">
+		<div class="fluid-container">
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<!-- Mobile Toggle Menu Button -->
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+					<h3 class="navbar-brand" href="index.html"><span>Boda</span> A y L</h3> 
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="#" data-nav-section="home"><span>Nosotros</span></a></li>
+						<li><a href="#" data-nav-section="explore"><span>Nuestros padres</span></a></li>
+						<li><a href="#" data-nav-section="testimony"><span>Código</span></a></li>
+						<li><a href="#" data-nav-section="pricing"><span>Fotos</span></a></li>
+						<li><a href="#" data-nav-section="services"><span>Ubicación</span></a></li>
+						<li><a href="#" data-nav-section="faq"><span>Confirmación</span></a></li>
+					</ul>
+				</div>
+			</nav>
+	  </div>
+	</header>
+
+	<section id="fh5co-home" data-section="home" style="background-image: url(images/boda1.png);">
+		<div class="gradient"></div>
+		<div class="container">
+			<div class="text-wrap">
+				<div class="text-inner">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<h1 class="to-animate">Save the date</h1>
+							<h1 class="to-animate">Arely y Luis</h1>
+							<h2 class="to-animate"> Tlalmanalco,  Estado de México.</h2>
+							<div class="call-to-action">
+							</div>
+						</div>
+						<div id="another-section">
+							<h1 class="animacion to-animate date-title"> 13/12/25 </h1>
+						</div>  
+						<div class="col-md-8 col-md-offset-2 subtext to-animate cont-temporizador">
+							<div id="days-block" class="bloque">
+								<span id="days">0</span>
+								<div class="label">días</div>
+							</div>
+							<div id="hours-block" class="bloque">
+								<span id="hours">0</span>
+								<div class="label">horas</div>
+							</div>
+							<div id="minutes-block" class="bloque">
+								<span id="minutes">0</span>
+								<div class="label">minutos</div>
+							</div>
+							<div id="seconds-block" class="bloque">
+								<span id="seconds">0</span>
+								<div class="label">segundos</div>
+							</div>
+						</div>
+	<script>
+		//===
+        // VARIABLES
+        //===
+        const DATE_TARGET = new Date('12/13/2025 5:00 PM');
+        // DOM for render
+        const SPAN_DAYS = document.querySelector('span#days');
+        const SPAN_HOURS = document.querySelector('span#hours');
+        const SPAN_MINUTES = document.querySelector('span#minutes');
+        const SPAN_SECONDS = document.querySelector('span#seconds');
+        // Milliseconds for the calculations
+        const MILLISECONDS_OF_A_SECOND = 1000;
+        const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
+        const MILLISECONDS_OF_A_HOUR = MILLISECONDS_OF_A_MINUTE * 60;
+        const MILLISECONDS_OF_A_DAY = MILLISECONDS_OF_A_HOUR * 24;
+
+        //===
+        // FUNCTIONS
+        //===
+
+        /**
+         * Method that updates the countdown and the sample
+         */
+        function updateCountdown() {
+            // Calcs
+            const NOW = new Date();
+            const DURATION = DATE_TARGET - NOW;
+
+            // Prevent negative values
+            if (DURATION <= 0) {
+                SPAN_DAYS.textContent = 0;
+                SPAN_HOURS.textContent = 0;
+                SPAN_MINUTES.textContent = 0;
+                SPAN_SECONDS.textContent = 0;
+                return;
+            }
+
+            const REMAINING_DAYS = Math.floor(DURATION / MILLISECONDS_OF_A_DAY);
+            const REMAINING_HOURS = Math.floor((DURATION % MILLISECONDS_OF_A_DAY) / MILLISECONDS_OF_A_HOUR);
+            const REMAINING_MINUTES = Math.floor((DURATION % MILLISECONDS_OF_A_HOUR) / MILLISECONDS_OF_A_MINUTE);
+            const REMAINING_SECONDS = Math.floor((DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND);
+
+            // Render
+            SPAN_DAYS.textContent = REMAINING_DAYS;
+            SPAN_HOURS.textContent = REMAINING_HOURS;
+            SPAN_MINUTES.textContent = REMAINING_MINUTES;
+            SPAN_SECONDS.textContent = REMAINING_SECONDS;
+        }
+
+        //===
+        // INIT
+        //===
+        updateCountdown();
+        // Refresh every second
+        setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+	</script>
+            
+		</div>
+        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="fh5co-explore" data-section="explore" style="background-image: url(images/boodaFo.jpeg);">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-8 col-md-offset-2 subtext to-animate image-contorno">
+					<audio id="MusicaPara" src="images/cancion.mp3"></audio>
+					<img src="images/MusicaPara.png" alt="user" onclick="document.getElementById('MusicaPara') .play()">
+				</div>
+
+				<div class="col-md-8 col-md-offset-2 subtext to-animate">
+					<h2>¡Nos casamos!</h2>
+					<p>Hay momentos en la vida que son especiales por sí solos </p> <p>Compartimos con las personas que apreciamos, los convierte en mágicos e inolvidables.</p>
+				</div>
+				<div class="col-md-12 section-heading text-center">
+					<div class="col-md-8 col-md-offset-2 subtext to-animate image-contorno">
+						<img src="images/imagenp.png" alt="user">
+					</div>
+					<h2 class="to-animate">Nuestros Padrinos</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<p>Dalia Eugenia Cruz Avendaño</p>
+							<p>Héctor Roldán Jiménez</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="fh5co-explore fh5co-explore-bg-color">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 section-heading text-center">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate image-contorno">
+							<img src="images/boda2.png" alt="user">
+						</div>
+						<h2 class="to-animate">Padres de la novia</h2>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2 subtext to-animate">
+								<p>Hilda Roldán Jiménez</p>
+								<p>Agustín Martínez Yáñez</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12 section-heading text-center">
+						<h2 class="to-animate">Padres del novio</h2>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2 subtext to-animate">
+								<p>Sonia Guadalupe Crisostomo Vazquez</p>
+								<p>Alejandro Puga Bucio</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<section id="fh5co-testimony" data-section="testimony" style="background-color: #f6e8e2;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 to-animate">
+					<div class="wrap-testimony">
+						<div class="owl-carousel-fullwidth">
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="images/boda4.png" style="width: 300px; height: 100px;" alt="user">
+									</figure>
+									<blockquote>
+										<p>"Código de Vestimenta."</p>
+										<p>Formal.</p>
+									</blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="images/boda5.png" style="width: 300px; height: 100px;" alt="user">
+									</figure>
+									<blockquote>
+										<p>"Ceremonia."</p>
+										<h1>4:50 pm</h1>
+									</blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="images/boda6.png" style="width: 300px; height: 100px;" alt="user">
+									</figure>
+									<blockquote>
+										<p>"Recepción."</p>
+										<h1>6:30 pm</h1>
+									</blockquote>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="getting-started getting-started-1" style="background-image: url(images/fondoB.png);">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Nuestros recuerdos</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<p>No olvides etiquetarnos en todas tus publicaciones de Instagram y Facebook utilizando nuestro Hashtag</p>
+							<h7>#bodaAre&Luis</h7> 
+							<i class="fa-brands fa-instagram fa-2xs" style="color: #540d29;"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	  
+	  <section class="getting-started getting-started-1" data-section="pricing" style="background-image: url(images/boodaFo.jpeg);">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Galería de fotos</h2>
+					<div class="imagenco to-animate">
+						<div class="row imagenmovimiento">
+							<ul>
+								<li><img src="images/1.png" alt=""></li>
+								<li><img src="images/2.png" alt=""></li>
+								<li><img src="images/3.png" alt=""></li>
+								<li><img src="images/4.jpeg" alt=""></li>
+								<li><img src="images/5.jpeg" alt=""></li>
+								<li><img src="images/6.jpeg" alt=""></li>
+							  </ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="fh5co-services" data-section="services" style="background-color: #f6e8e2;">
+		<div class="fh5co-services">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 section-heading text-center">
+						<h2 class="to-animate">Ubicación</h2>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2 subtext">
+								<h3 class="to-animate"> Carr Federal México-Cuautla Km. 48.5, Fracc. Campestre, 56715 Santa María, Méx. </h3>
+							</div>
+							<div class="col-md-8 col-md-offset-2 subtext to-animate">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3767.979223210878!2d-98.8192291!3d19.1961098!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce22fa98abd119%3A0xbdddda339b8255b7!2sCoral%20Clubes%20Santa%20Mar%C3%ADa!5e0!3m2!1ses!2smx!4v1722384007624!5m2!1ses!2smx" 
+							width="400" 
+							height="300" 
+							style="border:0;">
+							</iframe>
+							</div>
+						</div>
+					</div>
+					<div class="getting-started getting-started-2">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-6 to-animate-2">
+									<div class="call-to-action text-right">
+										<a href="https://maps.app.goo.gl/KNRo4qEaQBjdQpFq6" class="sign-up">Ubicación</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="fh5co-services">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 section-heading text-center">
+						<h2 class="to-animate">Opciones de hospedaje.</h2>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2 subtext">
+								<h3 class="to-animate"> Carr Federal México-Cuautla Km 18.5, 56700 Ixtapaluca, Méx. </h3>
+							</div>
+							<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15073.40682587721!2d-98.8084106!3d19.1798349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce23f22a6d3cd7%3A0x3e1312c528c43afd!2sHotel%20Rancho%20la%20Mesa!5e0!3m2!1ses-419!2smx!4v1722386385175!5m2!1ses-419!2smx" 
+							width="400" 
+							height="300" 
+							style="border:0;" >
+							</iframe>
+							<div class="getting-started getting-started-2">
+								<div class="container">
+									<div class="row">
+										<div class="col-md-6 to-animate-2">
+											<div class="call-to-action text-right">
+												<a href="https://maps.app.goo.gl/JPQH8BhM7unEKxQe7" class="sign-up">Ubicación</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-8 col-md-offset-2 subtext">
+							<h3 class="to-animate"> En el Club Santa María puedes hospedarte en el hotel o rentar cabaña para 6 personas.
+								*Las reservaciones se pueden realizar apartir de Enero 2025. Al 5979777025 o al 5979777031.</h3>
+						</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>	
+
+
+	<section class="getting-started getting-started-1" style="background-image: url(images/Fondoboda.png);">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Confirmación</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<p>Para asegurarnos de que todos nuestros seres queridos estén presentes en nuestra boda, necesitamos su confirmación antes del 01 de Octubre de 2025
+								¡No podemos esperar para celebrar con ustedes!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="fh5co-faq" data-section="faq" style="background-image: url(images/boodaFo.jpeg);">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Favor de confirmar</h2>
+					<form action="https://formsubmit.co/arelymrn@gmail.com" class="contact-form" method="post">
+						<div class="form-group">
+							<label><input type="radio" name="attendance" value="asistir"><h5>Asistiré</h5></label>
+							<label><input type="radio" name="attendance" value="no_asistire"><h5>No asistiré</h5></label>
+						</div>
+						<div class="form-group">
+							<label for="name" class="sr-only">Name</label>
+							<input type="text" name="name" class="form-control" id="name" placeholder="Familia" required>
+						</div>
+						<div class="form-group">
+							<label for="email" class="sr-only">Email</label>
+							<input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
+						</div>
+						<div class="form-group">
+							<label for="subject" class="sr-only">Subject</label>
+							<input type="text" name="subject" class="form-control" id="subject" placeholder="Personas confirmadas" required>
+						</div>
+						<div class="form-group">
+							<input type="submit" id="btn-submit" class="btn btn-send-message btn-md" value="Enviar">
+						</div>
+						<input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+						<input type="hidden" name="_captcha" value="false">
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- fontawesome-->
+	<script src="https://kit.fontawesome.com/286e3eb591.js" crossorigin="anonymous"></script>
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Owl Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Google Map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+	<script src="js/google_map.js"></script>
+	<!-- Main JS (Do not remove) -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>

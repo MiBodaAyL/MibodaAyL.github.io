@@ -59,8 +59,8 @@
 }
 
 .bloque {
-  width: 70px; /* Reduce el ancho del bloque */
-  height: 80px; /* Reduce la altura del bloque */
+  width: 60px; /* Reduce el ancho del bloque */
+  height: 70px; /* Reduce la altura del bloque */
   margin: 0.5px; /* Reduce aún más el margen */
   display: flex;
   flex-direction: column;

@@ -497,10 +497,10 @@ h3, h5, h6 {
 #fh5co-home {
   background-color: transparent;
   background-size: cover;
-  background-attachment: scroll;
+  background-attachment: scroll; /* o fixed según lo que necesites */
+  background-position: center center;
   position: relative;
   width: 100%;
-  background-color: #9fa3a5;
   color: #fff;
 }
 #fh5co-home a {

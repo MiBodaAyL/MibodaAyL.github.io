@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: 'MyFontOtro1';
-  src: url('./Cream\ Cake.otf');
+  src: url('./Calinastiya\ demo.ttf');
   font-weight: normal;
   font-style: normal;
 }
@@ -673,7 +673,7 @@ h3, h5, h6 {
 
 .fh5co-explore-bg-color {
   width: 100%;
-  background: #f1f1f1;
+  background: #f6e8e2;
   padding: 80px 0;
   margin-bottom: 0;
 }
@@ -1545,17 +1545,17 @@ h3, h5, h6 {
 }
 
 .owl-carousel .owl-controls .owl-dot span {
-  background: #e6e6e6;
+  background: #f39831;
 }
 .owl-carousel .owl-controls .owl-dot span:hover, .owl-carousel .owl-controls .owl-dot span:focus {
-  background: #cccccc;
+  background: #f39831;
 }
 .owl-carousel .owl-controls .owl-dot:hover span, .owl-carousel .owl-controls .owl-dot:focus span {
-  background: #cccccc;
+  background: #f39831;
 }
 .owl-carousel .owl-controls .owl-dot.active span {
   background: transparent;
-  border: 2px solid #ff3b30;
+  border: 2px solid #f39831;
 }
 
 /*# sourceMappingURL=style.css.map */

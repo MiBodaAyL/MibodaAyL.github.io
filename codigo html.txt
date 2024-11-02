@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -184,7 +183,7 @@
 
 				<div class="col-md-8 col-md-offset-2 subtext to-animate">
 					<h2>¡Nos casamos!</h2>
-					<p>Hay momentos en la vida que son especiales por sí solos </p> <p>Compartimos con las personas que apreciamos, los convierte en mágicos e inolvidables.</p>
+					<p>Hay momentos en la vida que son especiales por sí solos. Compartirlos con las personas que apreciamos, los convierte en mágicos e inolvidables.</p>
 				</div>
 				<div class="col-md-12 section-heading text-center">
 					<div class="col-md-8 col-md-offset-2 subtext to-animate image-contorno">
@@ -284,7 +283,7 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 subtext to-animate">
 							<p>No olvides etiquetarnos en todas tus publicaciones de Instagram y Facebook utilizando nuestro Hashtag</p>
-							<h7>#bodaAre&Luis</h7> 
+							<h2>#bodaAre&Luis</h2> 
 							<i class="fa-brands fa-instagram fa-2xs" style="color: #540d29;"></i>
 						</div>
 					</div>
@@ -305,8 +304,6 @@
 								<li><img src="images/2.png" alt=""></li>
 								<li><img src="images/3.png" alt=""></li>
 								<li><img src="images/4.jpeg" alt=""></li>
-								<li><img src="images/5.jpeg" alt=""></li>
-								<li><img src="images/6.jpeg" alt=""></li>
 							  </ul>
 						</div>
 					</div>
@@ -324,12 +321,14 @@
 						<h2 class="to-animate">Ubicación</h2>
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2 subtext">
-								<h3 class="to-animate">Carr Federal México-Cuautla Km. 48.5, Fracc. Campestre, 56715 Santa María, Méx.</h3>
+								<h3 class="to-animate"> Carr Federal México-Cuautla Km. 48.5, Fracc. Campestre, 56715 Santa María, Méx. </h3>
 							</div>
 							<div class="col-md-8 col-md-offset-2 subtext to-animate">
-								<a href="https://maps.app.goo.gl/KNRo4qEaQBjdQpFq6" class="sign-up">
-									<img src="images/ubi1.png" alt="Ubicación" width="300" height="300" style="border:0;">
-								</a>
+								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3767.979223210878!2d-98.8192291!3d19.1961098!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce22fa98abd119%3A0xbdddda339b8255b7!2sCoral%20Clubes%20Santa%20Mar%C3%ADa!5e0!3m2!1ses!2smx!4v1722384007624!5m2!1ses!2smx" 
+							width="400" 
+							height="300" 
+							style="border:0;">
+							</iframe>
 							</div>
 						</div>
 					</div>
@@ -347,7 +346,6 @@
 				</div>
 			</div>
 		</div>
-		
 		<div class="fh5co-services">
 			<div class="container">
 				<div class="row">
@@ -359,7 +357,7 @@
 							</div>
 							<div class="col-md-8 col-md-offset-2 subtext to-animate">
 							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15073.40682587721!2d-98.8084106!3d19.1798349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce23f22a6d3cd7%3A0x3e1312c528c43afd!2sHotel%20Rancho%20la%20Mesa!5e0!3m2!1ses-419!2smx!4v1722386385175!5m2!1ses-419!2smx" 
-							width="300" 
+							width="400" 
 							height="300" 
 							style="border:0;" >
 							</iframe>

@@ -19,6 +19,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'MyFontOtro2';
+  src: url('./Cherry\ Bird\ Demo.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 /* =======================================================
 *
@@ -224,7 +231,8 @@ a:hover, a:active, a:focus {
 
 p {
   margin-bottom: 1.5em;
-  font-size: 40px;
+  font-size: 50px;
+  text-align: center;
 }
 
 
@@ -257,7 +265,7 @@ h4 {
 
 h7 {
   color: #000000;
-  font-family: 'MyFontOtro', "PT Sans", Arial, serif;
+  font-family: Arial, "PT Sans", serif;
   font-weight: 400;
   margin: 0 0 30px 0;
   font-size: 45px;
@@ -268,6 +276,14 @@ h3, h5, h6 {
   font-family: "PT Sans", Arial, serif;
   font-weight: 400;
   margin: 0 0 30px 0;
+}
+
+h8 {
+  color: #000000;
+  font-family: 'MyFontOtro2', "PT Sans", serif;
+  font-weight: 400;
+  margin: 0 0 30px 0;
+  font-size: 45px;
 }
 
 ::-webkit-selection {
@@ -396,11 +412,10 @@ h3, h5, h6 {
   font-weight: 700;
   padding-left: 0;
   color: #a05619c5;
-  text-transform: uppercase;
   letter-spacing: 3px;
 }
 #fh5co-header .navbar-brand > span {
-  color: #ff3b30;
+  color: #da7416;
 }
 @media screen and (max-width: 992px) {
   #fh5co-header .navbar-brand {
@@ -1091,7 +1106,7 @@ h3, h5, h6 {
   margin: 0 0 0 0;
   font-size: 100px;
   font-weight: 500;
-  color: #3f1a1a;
+  color: #442104;
   position: relative;
   display: block;
   padding-bottom: 10px;

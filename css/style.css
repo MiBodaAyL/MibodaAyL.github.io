@@ -225,7 +225,7 @@ a {
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #9dcf41;
+  color: #0e0e0e;
   outline: none;
 }
 
@@ -840,7 +840,7 @@ h8 {
 
 .getting-started .call-to-action a.sign-up {
   display: inline-block; /* Permite que el botón tome solo el espacio necesario */
-  margin: -50px auto -10px auto; /* Aumenta el margen superior negativo para mover el botón hacia arriba */
+  margin: 0; /* Aumenta el margen superior negativo para mover el botón hacia arriba */
   padding: 10px 30px; /* Ajusta el tamaño del botón */
   background: #fd857d;
   color: #fff;
@@ -848,10 +848,10 @@ h8 {
   box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.19);
 }
 
+
 @media screen and (max-width: 992px) {
   .getting-started .call-to-action a.sign-up {
     float: none !important;
-    margin: 20px auto !important; /* Asegura el centrado en dispositivos más pequeños */
   }
 }
 
@@ -864,6 +864,31 @@ h8 {
 .getting-started .call-to-action a.sign-up:hover {
   background: #393e46;
 }
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Alinea los botones en columna */
+  align-items: center; /* Centra los botones horizontalmente */
+  gap: 10px; /* Espaciado entre botones */
+  margin: 20px 0; /* Ajusta el margen del contenedor */
+}
+
+.sign-up {
+  display: inline-block;
+  width: 200px; /* Ancho fijo para que ambos botones tengan el mismo tamaño */
+  text-align: center; /* Centra el texto dentro del botón */
+  padding: 10px 20px; /* Ajusta el espacio interno del botón */
+  background-color: #ff867d;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.19);
+}
+
+.sign-up:hover {
+  background-color: #ff6b61;
+}
+
 
 .getting-started .call-to-segurencia {
   display: block;

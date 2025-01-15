@@ -126,7 +126,7 @@
   padding: 0;
   list-style: none;
   width: 600%; /* Ancho para 6 imágenes (100% por cada una de las 6 imágenes) */
-  animation: imagenconslide 50s infinite; /* Duración total de ida y vuelta: 5 segundos por imagen (50s en total para 10 pasos) */
+  animation: imagenconslide 30s infinite; /* Duración total de ida y vuelta: 5 segundos por imagen (50s en total para 10 pasos) */
 }
 
 .imagenmovimiento li {
